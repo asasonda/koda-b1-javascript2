@@ -1,7 +1,7 @@
 ### Jelaskan alur passing function, pemanggilan callback, dan return
 
 ```penjelasan
--- cek dulu di function utamanya
+-- program akan lihat dulu di function utamanya
 ketika ada pemanggilan dari function, misalnya lingkaran(8, luasLingkaran), maka program akan menuju pada function utamanya yaitu lingkaran dan cek apakah argument sesuai dengan parameter function utamanya lalu mengeksekusi function tersebut dan mengembalikan return callback(r).
 
 -- jalankan callback function tujuan
