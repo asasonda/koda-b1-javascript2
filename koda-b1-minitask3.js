@@ -11,3 +11,10 @@ const lingkaran = {
 }
 console.log(lingkaran.luas())
 console.log(lingkaran.keliling())
+
+function ringkasan(luas, keliling){
+    luas = lingkaran.luas()
+    keliling = lingkaran.keliling()
+    return `Luas ${luas} dan keliling ${keliling}`
+}
+console.log(ringkasan())
