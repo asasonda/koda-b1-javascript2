@@ -1,13 +1,11 @@
 const lingkaran = {
     r: 8,
     luas: function(){
-        let luas
-        luas = this.r * this.r * 3.14 
+        let luas = this.r * this.r * 3.14 
         return luas
     },
     keliling: function(){
-        let keliling
-        keliling = 2 * 3.14 * this.r
+        let keliling = 2 * 3.14 * this.r
         return keliling 
     }
 }
