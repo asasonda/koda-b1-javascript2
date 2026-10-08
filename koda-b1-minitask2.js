@@ -27,7 +27,7 @@ let {harga, jumlah, nama, email} = fakturPembayaran
 let totalHarga = harga * jumlah
 console.log(`nama: ${nama}`)
 console.log(`email: ${email}`)
-console.log(`totalHarga : ${totalHarga}`)
+console.log(`totalHarga : Rp${totalHarga}`)
 
 console.log(`Struk dicetak untuk ${nama} ${email} dengan total tagihan Rp${totalHarga}`)
 console.log(' ')
