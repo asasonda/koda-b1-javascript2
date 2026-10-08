@@ -5,8 +5,12 @@
 ```mermaid
 flowchart TD
     start((mulai)) --> luas["lingkaran(8,luas)"]
-    luas --> menuju["function luas(r)"]
-    menuju --> cetak[/luas = 3.14 * r * r/]
+    luas --> utama[r = 8 dan cb = luasLingkaran]
+    utama --> return["return cb(8)"]
+    return --> menuju["function luas(8)"]
+    menuju --> rumus[luas = 3.14 * 8 * 8]
+    rumus --> cetak[/cetak:Luas/]
+
     cetak --> selesai(((selesai)))
 ```
 
@@ -14,8 +18,12 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    start((mulai)) --> luas["lingkaran(8,keliling)"]
-    luas --> menuju[" callback function keliling(r)"]
-    menuju --> cetak[/keliling = 2 x 3.14 x r/]
+    start((mulai)) --> keliling["lingkaran(8,keliling)"]
+    keliling --> utama[r = 8 dan cb = kelilingLingkaran]
+    utama --> return["return cb(8)"]
+    return --> menuju["function keliling(8)"]
+    menuju --> rumus[keliling = 2 x 3.14 * 8]
+    rumus --> cetak[/cetak:Keliling/]
+
     cetak --> selesai(((selesai)))
 ```
