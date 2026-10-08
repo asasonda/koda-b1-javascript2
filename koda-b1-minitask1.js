@@ -1,40 +1,53 @@
-// nilai mx
-let nilai1 = [80,85,70,90,60]
-let nilai2 = [60, 99, 55]
-const nilai = [...nilai1,...nilai2]
+## Mencari Nilai Max
 
-let cekNilaiMax = 0
+```mermaid
+flowchart TD
+    start((mulai)) --> NilaiArray["Array nilai1"]
+    NilaiArray --> array2[Array nilai2]
+    array2 --> spread["nilai = [...ArrayNilai1, ArrayNilai2]"]
+    spread --> deklarasi[cekNilaiMax = 0]
+    deklarasi --> i[i=0]
+    i --> cek{"i < nilai.length"}
+    cek -- ya --> kondisi{"nilai[i] > cekNilaiMax"}
+    cek -- tidak --> selesai(((selesai)))
 
-for(let i=0; i < nilai.length; i++){
-    if(nilai[i] > cekNilaiMax){
-        cekNilaiMax = nilai[i]
-    }
-}
-console.log(cekNilaiMax)
+    kondisi -- ya --> simpan["cekNilaiMax = nilai[i]"]
+    simpan --> increament[i++]
+    increament --> cek
+    kondisi -- tidak --> increament
+```
 
+## Nilai Min
+```mermaid
+flowchart TD
+    start((mulai)) --> NilaiArray["ArraynilaiSiswa1"]
+    NilaiArray --> array2[ArraynilaiSiswa2]
+    array2 --> spread["nilaiSiswa = [...ArraynilaiSiswa1, ...ArraynilaiSiswa2]"]
+    spread --> deklarasi[cekNilaiMin = 100]
+    deklarasi --> i[j=0]
+    i --> cek{"j < nilaiSiswa.length"}
+    cek -- ya --> kondisi{"nilaiSiswa[j] <= cekNilaiMin"}
+    cek -- tidak --> selesai(((selesai)))
 
-// nilai min
+    kondisi -- ya --> simpan["cekNilaiMin = nilaiSiswa[j]"]
+    simpan --> increament[i++]
+    increament --> cek
+    kondisi -- tidak --> increament
+```
 
-let nilaiSiswa1 = [80,85,70,90,60]
-let nilaiSiswa2 = [20,80,60]
-let nilaiSiswa = [...nilaiSiswa1,...nilaiSiswa2]
-let cekNilaiMin = 100
-for(let j=0; j < nilaiSiswa.length; j++){
-    if(nilaiSiswa[j] <= cekNilaiMin){
-        cekNilaiMin = nilaiSiswa[j]
-    }
-}
-console.log(cekNilaiMin)
-
-
-// average
-
-let nilaiSiswaP1 = [90,97,92,34]
-let nilaiSiswaP2 = [30, 10]
-let nilaiSiswaP = [...nilaiSiswaP1, ...nilaiSiswaP2]
-let average = 0
-for(let k=0; k < nilaiSiswaP.length; k++){
-    average = average + nilaiSiswaP[k]
-}
-average = average / nilaiSiswaP.length
-console.log(average)
+## Hitung Rata Rata
+```mermaid
+flowchart TD
+    start((mulai)) --> NilaiArray["ArrayNilaiSiswa1"]
+    NilaiArray --> array2[ArraynilaiSiswa2]
+    array2 --> spread["nilaiSiswa = [...ArraynilaiSiswa1, ...ArraynilaiSiswa2]"]
+    spread --> deklarasi[average = 0]
+    deklarasi --> i[k=0] 
+    i --> cek{k < nilaiSiswa.length}
+    cek -- ya --> simpan["average = average + nilaiSiswa[k]"]
+    cek -- no --> kalkulasi[average = average / nilaiSiswa.length]
+    simpan --> increment[i++]
+    increment --> cek
+    kalkulasi --> cetak[/cetak average/]
+    cetak --> selesai(((selesai)))
+```
