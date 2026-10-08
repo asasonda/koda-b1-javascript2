@@ -15,7 +15,7 @@ flowchart TD
     kondisi -- tidak --> increament
 ```
 
-## nilai min
+## Nilai Min
 ```mermaid
 flowchart TD
     start((mulai)) --> NilaiArray["nilaiSiswa = [80,85,70,90,60]"]
@@ -29,4 +29,18 @@ flowchart TD
     simpan --> increament[i++]
     increament --> cek
     kondisi -- tidak --> increament
+```
+
+## Hitung Rata Rata
+```mermaid
+flowchart TD
+    start((mulai)) --> NilaiArray["nilaiSiswa = [80,85,70,90,60]"]
+    NilaiArray --> deklarasi[average = 0]
+    deklarasi --> i[k=0] 
+    i --> cek{k < nilaiSiswa.length}
+    cek -- ya --> simpan["average = average + nilaiSiswa[k]"]
+    cek -- no --> kalkulasi[average = average / nilaiSiswa.length]
+    simpan --> increment[i++]
+    kalkulasi --> cetak[/cetak average/]
+    cetak --> selesai(((selesai)))
 ```
