@@ -16,6 +16,7 @@ if (statusPembayaran) {
   fakturPembayaran.status = "Lunas";
   console.log('==== Detail Pembayaran ====')
   console.log(fakturPembayaran);
+  console.log('===========================')
 } else {
   console.log("Menunggu Pembayaran");
 }
@@ -24,6 +25,9 @@ console.log(' ')
 // ekstrak
 let {harga, jumlah, nama, email} = fakturPembayaran
 let totalHarga = harga * jumlah
+console.log(`nama: ${nama}`)
+console.log(`email: ${email}`)
+console.log(`totalHarga : ${totalHarga}`)
 
 console.log(`Struk dicetak untuk ${nama} ${email} dengan total tagihan Rp${totalHarga}`)
 console.log(' ')
