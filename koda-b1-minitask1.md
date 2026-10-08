@@ -2,8 +2,10 @@
 
 ```mermaid
 flowchart TD
-    start((mulai)) --> NilaiArray["nilai = [80,85,70,90,60]"]
-    NilaiArray --> deklarasi[cekNilaiMax = 0]
+    start((mulai)) --> NilaiArray["Array nilai1"]
+    NilaiArray --> array2[Array nilai2]
+    array2 --> spread["nilai = [...ArrayNilai1, ArrayNilai2]"]
+    spread --> deklarasi[cekNilaiMax = 0]
     deklarasi --> i[i=0]
     i --> cek{"i < nilai.length"}
     cek -- ya --> kondisi{"nilai[i] > cekNilaiMax"}
@@ -18,10 +20,12 @@ flowchart TD
 ## Nilai Min
 ```mermaid
 flowchart TD
-    start((mulai)) --> NilaiArray["nilaiSiswa = [80,85,70,90,60]"]
-    NilaiArray --> deklarasi[cekNilaiMin = 100]
+    start((mulai)) --> NilaiArray["ArraynilaiSiswa1"]
+    NilaiArray --> array2[ArraynilaiSiswa2]
+    array2 --> spread["nilaiSiswa = [...ArraynilaiSiswa1, ...ArraynilaiSiswa2]"]
+    spread --> deklarasi[cekNilaiMin = 100]
     deklarasi --> i[j=0]
-    i --> cek{"j < nilai.length"}
+    i --> cek{"j < nilaiSiswa.length"}
     cek -- ya --> kondisi{"nilaiSiswa[j] <= cekNilaiMin"}
     cek -- tidak --> selesai(((selesai)))
 
@@ -34,8 +38,10 @@ flowchart TD
 ## Hitung Rata Rata
 ```mermaid
 flowchart TD
-    start((mulai)) --> NilaiArray["nilaiSiswa = [80,85,70,90,60]"]
-    NilaiArray --> deklarasi[average = 0]
+    start((mulai)) --> NilaiArray["ArrayNilaiSiswa1"]
+    NilaiArray --> array2[ArraynilaiSiswa2]
+    array2 --> spread["nilaiSiswa = [...ArraynilaiSiswa1, ...ArraynilaiSiswa2]"]
+    spread --> deklarasi[average = 0]
     deklarasi --> i[k=0] 
     i --> cek{k < nilaiSiswa.length}
     cek -- ya --> simpan["average = average + nilaiSiswa[k]"]
