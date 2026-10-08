@@ -41,6 +41,7 @@ flowchart TD
     cek -- ya --> simpan["average = average + nilaiSiswa[k]"]
     cek -- no --> kalkulasi[average = average / nilaiSiswa.length]
     simpan --> increment[i++]
+    increment --> cek
     kalkulasi --> cetak[/cetak average/]
     cetak --> selesai(((selesai)))
 ```
